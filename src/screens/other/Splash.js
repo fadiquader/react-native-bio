@@ -24,7 +24,7 @@ export class SplashScreen extends Component {
             StatusBar.setHidden(false, 'slide');
             let toHome = NavigationActions.reset({
                 index: 0,
-                actions: [NavigationActions.navigate({routeName: 'Home'})]
+                actions: [NavigationActions.navigate({routeName: 'LogIn'})]
             });
             this.props.navigation.dispatch(toHome)
         }, timeFrame);

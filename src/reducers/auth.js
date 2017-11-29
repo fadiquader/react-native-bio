@@ -16,14 +16,8 @@ const initialState = {
 export const facebookLoginSuccess = createAction('facebookLoginSuccess');
 export const facebookLoginFailed = createAction('facebookLoginFailed');
 export const loginUser = createAction('loginUser');
+export const doFacebookLogin = createAction('doLogin');
 
-const doFacebookLogin = async () => {
-    const { type, token } = await Facebook.logInWithReadPermissionsAsync('158671718005040', {
-        permissions: ['public_profile']
-    });
-    if(type === 'cancel') return;
-    await AsyncStorage.setItem('fb_token', token);
-};
 // reducer
 const authReducer = createReducer({
     [facebookLoginSuccess]: (state, payload) => ({ ...state, token: payload }),

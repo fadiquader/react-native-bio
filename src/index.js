@@ -29,6 +29,9 @@ const Root = StackNavigator({
     Walkthrough: {
         screen: Screens.WalkthroughScreen
     },
+    LogIn: {
+        screen: Screens.Login2
+    },
     Home: {
         screen: DrawerNavigator(Home,
             {
