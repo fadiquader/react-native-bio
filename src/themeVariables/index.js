@@ -1,0 +1,11 @@
+export const PRIMARY_COLOR = '#009688';
+export const DARK_PRIMARY_COLOR = '#00796B';
+export const LIGHT_PRIMARY_COLOR = '#B2DFDB';
+export const ACCENT_COLOR = '#FF9800';
+export const TEXT_ICON = '#FFFFFF';
+export const DEVIDER_COLOR = '#BDBDBD';
+export const SECONDERY_COLOR = '#757575';
+export const PRIMARY_TEXT = '#212121';
+export const ANDROID_RIPPLE_COLOR_LIGHT = 'rgba(256, 256, 256, 0.3)';
+export const ANDROID_RIPPLE_COLOR_DARK = 'rgba(0, 0, 0, 0.15)';
+export const ICON_FONT_SIZE = 24;
