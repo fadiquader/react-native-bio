@@ -4,9 +4,8 @@ import { createReducer, createAction } from 'redux-act';
 
 const initialState = {
     isAuthenticated: false,
-    uid: null,
-    username: null,
-    email: null,
+    id: null,
+    name: null,
     loading: false,
     error: null,
     token: null,
@@ -20,8 +19,8 @@ export const doFacebookLogin = createAction('doLogin');
 
 // reducer
 const authReducer = createReducer({
-    [facebookLoginSuccess]: (state, payload) => ({ ...state, token: payload }),
-    [facebookLoginFailed]: state => ({ ...state, token: null }),
+    [facebookLoginSuccess]: (state, {id, name}) => ({ ...state, isAuthenticated: true, id, name }),
+    [facebookLoginFailed]: state => ({ ...state, isAuthenticated: false }),
 }, initialState);
 
 

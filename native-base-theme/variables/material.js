@@ -1,5 +1,5 @@
 import color from "color";
-import * as v from '../../src/themeVariables';
+
 import { Platform, Dimensions, PixelRatio } from "react-native";
 
 const deviceHeight = Dimensions.get("window").height;
@@ -13,8 +13,8 @@ export default {
   platform,
   // AndroidRipple
   androidRipple: true,
-  androidRippleColor: v.ANDROID_RIPPLE_COLOR_LIGHT,
-  androidRippleColorDark: v.ANDROID_RIPPLE_COLOR_DARK,
+  androidRippleColor: "rgba(256, 256, 256, 0.3)",
+  androidRippleColorDark: "rgba(0, 0, 0, 0.15)",
 
   // Badge
   badgeBg: "#ED1727",
@@ -36,17 +36,17 @@ export default {
   CheckboxIconMarginTop: platform === "ios" ? undefined : 1,
   CheckboxFontSize: platform === "ios" ? 21 : 18,
   DefaultFontSize: 17,
-  checkboxBgColor: v.PRIMARY_COLOR,
+  checkboxBgColor: "#039BE5",
   checkboxSize: 20,
   checkboxTickColor: "#fff",
 
   // Segment
-  segmentBackgroundColor: v.PRIMARY_COLOR,
+  segmentBackgroundColor: "#3F51B5",
   segmentActiveBackgroundColor: "#fff",
   segmentTextColor: "#fff",
-  segmentActiveTextColor: v.PRIMARY_COLOR,
+  segmentActiveTextColor: "#3F51B5",
   segmentBorderColor: "#fff",
-  segmentBorderColorMain: v.PRIMARY_COLOR,
+  segmentBorderColorMain: "#3F51B5",
 
   // New Variable
   get defaultTextColor() {
@@ -109,7 +109,7 @@ export default {
   cardDefaultBg: "#fff",
 
   // Color
-  brandPrimary: v.PRIMARY_COLOR,
+  brandPrimary: "#3F51B5",
   brandInfo: "#3F57D3",
   brandSuccess: "#5cb85c",
   brandDanger: "#d9534f",
@@ -134,11 +134,11 @@ export default {
 
   // Footer
   footerHeight: isIphoneX ? 89 : 55,
-  footerDefaultBg: v.PRIMARY_COLOR,
+  footerDefaultBg: "#3F51B5",
   footerPaddingBottom: isIphoneX ? 34 : 0,
 
   // FooterTab
-  tabBarTextColor: v.LIGHT_PRIMARY_COLOR,
+  tabBarTextColor: "#b3c7f9",
   tabBarTextSize: platform === "ios" ? 14 : 11,
   activeTab: "#fff",
   sTabBarActiveTextColor: "#007aff",
@@ -146,8 +146,8 @@ export default {
   tabActiveBgColor: undefined,
 
   // Tab
-  tabDefaultBg: v.PRIMARY_COLOR,
-  topTabBarTextColor: v.LIGHT_PRIMARY_COLOR,
+  tabDefaultBg: "#3F51B5",
+  topTabBarTextColor: "#b3c7f9",
   topTabBarActiveTextColor: "#fff",
   topTabActiveBgColor: undefined,
   topTabBarBorderColor: "#fff",
@@ -155,7 +155,7 @@ export default {
 
   // Header
   toolbarBtnColor: "#fff",
-  toolbarDefaultBg: v.PRIMARY_COLOR,
+  toolbarDefaultBg: "#3F51B5",
   toolbarHeight: platform === "ios" ? (isIphoneX ? 88 : 64) : 56,
   toolbarIconSize: platform === "ios" ? 20 : 22,
   toolbarSearchIconSize: platform === "ios" ? 20 : 23,
@@ -163,7 +163,7 @@ export default {
   searchBarHeight: platform === "ios" ? 30 : 40,
   toolbarInverseBg: "#222",
   toolbarTextColor: "#fff",
-  toolbarDefaultBorder: v.PRIMARY_COLOR,
+  toolbarDefaultBorder: "#3F51B5",
   iosStatusbar: "light-content",
   get statusBarColor() {
     return color(this.toolbarDefaultBg)
@@ -228,7 +228,7 @@ export default {
 
   // Radio Button
   radioBtnSize: platform === "ios" ? 25 : 23,
-  radioSelectedColorAndroid: v.PRIMARY_COLOR,
+  radioSelectedColorAndroid: "#5067FF",
 
   // New Variable
   radioBtnLineHeight: platform === "ios" ? 29 : 24,
@@ -256,7 +256,7 @@ export default {
   noteFontSize: 14,
 
   // Title
-  titleFontfamily: platform === "ios" ? "System" : "Roboto_medium",
+  titleFontfamily: platform === "ios" ? "Roboto" : "Roboto_medium",
   titleFontSize: 19,
   subTitleFontSize: 14,
   subtitleColor: "#FFF",

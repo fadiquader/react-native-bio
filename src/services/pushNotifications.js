@@ -9,7 +9,7 @@ export default async () => {
     if(prevToken) return;
     let { status } = await Permissions.askAsync(Permissions.REMOTE_NOTIFICATIONS);
     if(status !== 'granted') return;
-    let token = await Notifications.getExponentPushTokenAsync();
+    let token = await Notifications.getExpoPushTokenAsync();
     const res = await axios.post(PUSH_ENDPOINT, { token: { token }});
     console.log('res ', res.data)
     await AsyncStorage.setItem('pushtoken', token)

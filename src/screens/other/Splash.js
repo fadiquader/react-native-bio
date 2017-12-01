@@ -5,7 +5,8 @@ import {
     Text,
     View,
     Dimensions,
-    StatusBar
+    StatusBar,
+    AsyncStorage
 } from 'react-native';
 
 import {NavigationActions} from 'react-navigation';
@@ -18,17 +19,18 @@ export class SplashScreen extends Component {
         super(props);
     }
 
-    componentDidMount() {
+    async componentWillMount() {
         StatusBar.setHidden(true, 'none');
-        setTimeout(() => {
-            StatusBar.setHidden(false, 'slide');
-            let toHome = NavigationActions.reset({
-                index: 0,
-                actions: [NavigationActions.navigate({routeName: 'LogIn'})]
-            });
-            this.props.navigation.dispatch(toHome)
-        }, timeFrame);
+        let token = await AsyncStorage.getItem('fb_token');
+        let route = token ? 'Home': 'LogIn';
+        let toHome = NavigationActions.reset({
+            index: 0,
+            actions: [NavigationActions.navigate({routeName: route})]
+        });
+        StatusBar.setHidden(false, 'slide');
+        this.props.navigation.dispatch(toHome)
     }
+
 
     render() {
         let width = Dimensions.get('window').width;
